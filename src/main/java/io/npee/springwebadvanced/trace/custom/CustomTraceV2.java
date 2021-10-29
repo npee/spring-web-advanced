@@ -54,7 +54,7 @@ public class CustomTraceV2 {
     private static String addSpace(String prefix, int level) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < level; i++) {
-            sb.append( (i == level - 1) ? "|" + prefix : "| ");
+            sb.append( (i == level - 1) ? "|" + prefix : "|\t");
         }
         return sb.toString();
     }
