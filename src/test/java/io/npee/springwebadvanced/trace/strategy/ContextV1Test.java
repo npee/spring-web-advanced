@@ -1,6 +1,7 @@
 package io.npee.springwebadvanced.trace.strategy;
 
 import io.npee.springwebadvanced.trace.strategy.code.strategy.ContextV1;
+import io.npee.springwebadvanced.trace.strategy.code.strategy.Strategy;
 import io.npee.springwebadvanced.trace.strategy.code.strategy.StrategyLogic1;
 import io.npee.springwebadvanced.trace.strategy.code.strategy.StrategyLogic2;
 import io.npee.springwebadvanced.trace.template.code.AbstractTemplate;
@@ -80,4 +81,52 @@ public class ContextV1Test {
         contextV2.execute();
     }
 
+    @Test
+    void strategyV2() {
+        Strategy strategyLogic1 = new Strategy() {
+            @Override
+            public void call() {
+                log.info("로직 1 실행");
+            }
+        };
+        ContextV1 context1 = new ContextV1(strategyLogic1);
+        context1.execute();
+
+        Strategy strategyLogic2 = new Strategy() {
+            @Override
+            public void call() {
+                log.info("로직 2 실행");
+            }
+        };
+        ContextV1 context2 = new ContextV1(strategyLogic2);
+        context2.execute();
+    }
+
+    @Test
+    void strategyV3() {
+        ContextV1 context1 = new ContextV1(new Strategy() {
+            @Override
+            public void call() {
+                log.info("로직 1 실행");
+            }
+        });
+        context1.execute();
+
+        ContextV1 context2 = new ContextV1(new Strategy() {
+            @Override
+            public void call() {
+                log.info("로직 2 실행");
+            }
+        });
+        context2.execute();
+    }
+
+    @Test
+    void strategyV4() {
+        ContextV1 context1 = new ContextV1(() -> log.info("로직 1 실행"));
+        context1.execute();
+
+        ContextV1 context2 = new ContextV1(() -> log.info("로직 2 실행"));
+        context2.execute();
+    }
 }
