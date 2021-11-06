@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Import;
 // @Import({AppV6Config.class, AppV7Config.class})
 @Import(InterfaceProxyConfig.class)
 @SpringBootApplication(scanBasePackages = {
-        "io.npee.springwebadvanced.app.v6.proxy",
-        // "io.npee.springwebadvanced.app.v7",
+        // "io.npee.springwebadvanced.app.v6.proxy",
+        "io.npee.springwebadvanced.app.v7.proxy",
         // "io.npee.springwebadvanced.app.v8"
 })
 public class SpringWebAdvancedApplication {
