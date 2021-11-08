@@ -1,6 +1,6 @@
 package io.npee.springwebadvanced;
 
-import io.npee.springwebadvanced.app.v6.proxyfactory.advice.ProxyFactoryConfigV2;
+import io.npee.springwebadvanced.app.config.postprocessor.BeanPostProcessorConfig;
 import io.npee.springwebadvanced.trace.prod.LogTrace;
 import io.npee.springwebadvanced.trace.prod.ThreadLocalLogTrace;
 import org.springframework.boot.SpringApplication;
@@ -11,12 +11,13 @@ import org.springframework.context.annotation.Import;
 // @Import({AppV6Config.class, AppV7Config.class})
 // @Import(InterfaceProxyConfig.class)
 // @Import(DynamicProxyFilterConfig.class)
-@Import(ProxyFactoryConfigV2.class)
-@SpringBootApplication(scanBasePackages = {
-        // "io.npee.springwebadvanced.app.v6.proxy",
-        "io.npee.springwebadvanced.app.v6.dynamicproxy.handler",
-        // "io.npee.springwebadvanced.app.v7.proxy",
-        // "io.npee.springwebadvanced.app.v8"
+// @Import(ProxyFactoryConfigV2.class)
+@Import(BeanPostProcessorConfig.class)
+@SpringBootApplication(
+        scanBasePackages = {
+            "io.npee.springwebadvanced.app.v6",
+            "io.npee.springwebadvanced.app.v7",
+            "io.npee.springwebadvanced.app.v8"
 })
 public class SpringWebAdvancedApplication {
 
