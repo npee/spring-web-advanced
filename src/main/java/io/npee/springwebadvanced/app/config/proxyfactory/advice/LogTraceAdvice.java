@@ -1,4 +1,4 @@
-package io.npee.springwebadvanced.app.v6.proxyfactory.advice;
+package io.npee.springwebadvanced.app.config.proxyfactory.advice;
 
 import io.npee.springwebadvanced.trace.TraceStatus;
 import io.npee.springwebadvanced.trace.prod.LogTrace;

@@ -1,4 +1,4 @@
-package io.npee.springwebadvanced.app.v6.proxy;
+package io.npee.springwebadvanced.app.config.proxy;
 
 import io.npee.springwebadvanced.app.v6.*;
 import io.npee.springwebadvanced.trace.prod.LogTrace;

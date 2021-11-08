@@ -1,18 +1,15 @@
-package io.npee.springwebadvanced.app.v7.proxy;
+package io.npee.springwebadvanced.app.config.proxy;
 
-import io.npee.springwebadvanced.app.v7.OrderRepositoryV7;
+import io.npee.springwebadvanced.app.v6.OrderRepositoryV6;
 import io.npee.springwebadvanced.trace.TraceStatus;
 import io.npee.springwebadvanced.trace.prod.LogTrace;
+import lombok.RequiredArgsConstructor;
 
-public class OrderRepositoryConcreteProxy extends OrderRepositoryV7 {
+@RequiredArgsConstructor
+public class OrderRepositoryInterfaceProxy implements OrderRepositoryV6 {
 
-    private final OrderRepositoryV7 target;
+    private final OrderRepositoryV6 target;
     private final LogTrace trace;
-
-    public OrderRepositoryConcreteProxy(OrderRepositoryV7 target, LogTrace trace) {
-        this.target = target;
-        this.trace = trace;
-    }
 
     @Override
     public void save(String itemId) {

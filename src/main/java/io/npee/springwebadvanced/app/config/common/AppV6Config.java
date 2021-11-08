@@ -1,5 +1,6 @@
-package io.npee.springwebadvanced.app.v6;
+package io.npee.springwebadvanced.app.config.common;
 
+import io.npee.springwebadvanced.app.v6.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

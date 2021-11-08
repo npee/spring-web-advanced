@@ -1,7 +1,7 @@
-package io.npee.springwebadvanced.app.v6.dynamicproxy;
+package io.npee.springwebadvanced.app.config.dynamicproxy;
 
 import io.npee.springwebadvanced.app.v6.*;
-import io.npee.springwebadvanced.app.v6.dynamicproxy.handler.LogTraceFilterHandler;
+import io.npee.springwebadvanced.app.config.dynamicproxy.handler.LogTraceFilterHandler;
 import io.npee.springwebadvanced.trace.prod.LogTrace;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

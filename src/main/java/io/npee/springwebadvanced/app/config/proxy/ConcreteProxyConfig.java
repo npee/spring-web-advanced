@@ -1,4 +1,4 @@
-package io.npee.springwebadvanced.app.v7.proxy;
+package io.npee.springwebadvanced.app.config.proxy;
 
 import io.npee.springwebadvanced.app.v7.OrderControllerV7;
 import io.npee.springwebadvanced.app.v7.OrderRepositoryV7;
