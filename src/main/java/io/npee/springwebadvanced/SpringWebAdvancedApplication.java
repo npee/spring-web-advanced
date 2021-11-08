@@ -1,5 +1,6 @@
 package io.npee.springwebadvanced;
 
+import io.npee.springwebadvanced.app.config.autoproxy.AutoProxyConfig;
 import io.npee.springwebadvanced.app.config.postprocessor.BeanPostProcessorConfig;
 import io.npee.springwebadvanced.trace.prod.LogTrace;
 import io.npee.springwebadvanced.trace.prod.ThreadLocalLogTrace;
@@ -12,7 +13,8 @@ import org.springframework.context.annotation.Import;
 // @Import(InterfaceProxyConfig.class)
 // @Import(DynamicProxyFilterConfig.class)
 // @Import(ProxyFactoryConfigV2.class)
-@Import(BeanPostProcessorConfig.class)
+// @Import(BeanPostProcessorConfig.class)
+@Import(AutoProxyConfig.class)
 @SpringBootApplication(
         scanBasePackages = {
             "io.npee.springwebadvanced.app.v6",
